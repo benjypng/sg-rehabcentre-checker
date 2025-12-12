@@ -5,7 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^10.4.12",
-    "body-parser": "^1.20.1",
+    "body-parser": "^1.20.3",
     "connect-flash": "^0.1.1",
     "cors": "^2.8.5",
     "cssnano": "^5.1.13",
