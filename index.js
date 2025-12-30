@@ -33,7 +33,7 @@ hbs.registerHelper("if_eq", (a, b, options) => {
 app.use(
   express.urlencoded({
     extended: false,
-  })
+  }),
 );
 
 // setup sessions
@@ -42,7 +42,7 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-  })
+  }),
 );
 
 // Set up flash
@@ -56,7 +56,7 @@ app.use((err, req, res, next) => {
     console.log(err);
     req.flash(
       "error_messages",
-      "The form has expired. Please reload your page."
+      "The form has expired. Please reload your page.",
     );
     res.redirect("back");
   } else {
@@ -94,7 +94,7 @@ const adminRoute = require("./routes/adminUpdate");
 (async () => {
   const db = await MongoUtil.connect(
     process.env.MONGO_URL,
-    process.env.COLLECTION
+    process.env.COLLECTION,
   );
 
   // add mongodb to middleware
@@ -115,6 +115,6 @@ const adminRoute = require("./routes/adminUpdate");
   app.use("/admin-update", adminRoute);
 })();
 
-app.listen(process.env.PORT || 7000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server has started ...");
 });
