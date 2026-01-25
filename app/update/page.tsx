@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { Container, Title } from '@mantine/core'
 import { ObjectId } from 'mongodb'
 import { redirect } from 'next/navigation'
@@ -9,6 +10,10 @@ import { Organisation } from '@/app/lib/types'
 
 import { Header } from '../components/Header'
 import UpdateForm from './UpdateForm'
+
+export const metadata: Metadata = {
+  title: 'Update Vacancy | SG Rehabcentre Checker',
+}
 
 export default async function UpdatePage() {
   const session = await getServerSession(authOptions)

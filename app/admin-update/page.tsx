@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { Container, Title } from '@mantine/core'
 import { redirect } from 'next/navigation'
 import { getServerSession } from 'next-auth'
@@ -8,6 +9,10 @@ import { Organisation } from '@/app/lib/types'
 
 import { Header } from '../components/Header'
 import AdminForm from './AdminForm'
+
+export const metadata: Metadata = {
+  title: 'Admin Update Dashboard | SG Rehabcentre Checker',
+}
 
 export default async function AdminUpdatePage() {
   const session = await getServerSession(authOptions)

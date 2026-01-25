@@ -1,6 +1,7 @@
 import '@mantine/core/styles.css'
 import '@mantine/notifications/styles.css'
 
+import type { Metadata, Viewport } from 'next'
 import {
   ColorSchemeScript,
   MantineProvider,
@@ -13,20 +14,26 @@ import { theme } from '../theme'
 import { ForcePasswordChange } from './components/ForcePasswordChange'
 import Provider from './SessionProvider'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'SG Rehabcentre Checker',
+  description: 'SG Rehabcentre Checker Application',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
-export default function RootLayout({ children }: { children: any }) {
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
-        />
       </head>
       <body>
         <MantineProvider theme={theme}>
