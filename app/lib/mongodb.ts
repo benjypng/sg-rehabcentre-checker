@@ -4,7 +4,7 @@ if (!process.env.MONGO_URL) {
   throw new Error('Invalid/Missing environment variable: "MONGO_URL"')
 }
 
-if (!process.env.COLLECTION) {
+if (!process.env.COLLECTION && process.env.NODE_ENV !== 'production') {
   throw new Error('Invalid/Missing environment variable: "COLLECTION"')
 }
 
