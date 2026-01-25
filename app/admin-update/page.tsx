@@ -12,7 +12,7 @@ import AdminForm from './AdminForm'
 export default async function AdminUpdatePage() {
   const session = await getServerSession(authOptions)
 
-  if (!session || session.user.role_id !== '1') {
+  if (!session || String(session.user.role_id) !== '1') {
     redirect('/login')
   }
 

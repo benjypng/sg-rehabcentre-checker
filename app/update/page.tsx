@@ -13,7 +13,7 @@ import UpdateForm from './UpdateForm'
 export default async function UpdatePage() {
   const session = await getServerSession(authOptions)
 
-  if (!session || session.user.role_id !== '2') {
+  if (!session || String(session.user.role_id) !== '2') {
     redirect('/login')
   }
 

@@ -56,8 +56,8 @@ export const authOptions: NextAuthOptions = {
             id: user._id.toString(),
             name: user.name,
             email: user.email,
-            org_id: user.org_id,
-            role_id: user.role_id,
+            org_id: String(user.org_id),
+            role_id: String(user.role_id),
             forceChangePassword: credentials.password === 'password123',
           }
         }
@@ -67,8 +67,8 @@ export const authOptions: NextAuthOptions = {
             id: user._id.toString(),
             name: user.name,
             email: user.email,
-            org_id: user.org_id,
-            role_id: user.role_id,
+            org_id: String(user.org_id),
+            role_id: String(user.role_id),
             forceChangePassword: true,
           }
         }

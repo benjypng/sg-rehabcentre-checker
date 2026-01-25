@@ -42,7 +42,7 @@ export default function LoginPage() {
         color: 'green',
       })
       const session = await getSession()
-      if (session?.user?.role_id === '1') {
+      if (String(session?.user?.role_id) === '1') {
         router.push('/admin-update')
       } else {
         router.push('/update')
