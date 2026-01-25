@@ -68,21 +68,21 @@ export default function AdminForm({
             <Grid.Col span={4}>
               <NumberInput
                 label="Female Capacity"
-                value={org.female_capacity}
+                value={org.female_capacity ?? ''}
                 onChange={(v) => handleChange(index, 'female_capacity', v)}
               />
             </Grid.Col>
             <Grid.Col span={4}>
               <NumberInput
                 label="Female Pending"
-                value={org.female_pending}
+                value={org.female_pending ?? ''}
                 onChange={(v) => handleChange(index, 'female_pending', v)}
               />
             </Grid.Col>
             <Grid.Col span={4}>
               <NumberInput
                 label="Female Available"
-                value={org.female_available}
+                value={org.female_available ?? ''}
                 onChange={(v) => handleChange(index, 'female_available', v)}
               />
             </Grid.Col>
@@ -90,21 +90,21 @@ export default function AdminForm({
             <Grid.Col span={4}>
               <NumberInput
                 label="Male Capacity"
-                value={org.male_capacity}
+                value={org.male_capacity ?? ''}
                 onChange={(v) => handleChange(index, 'male_capacity', v)}
               />
             </Grid.Col>
             <Grid.Col span={4}>
               <NumberInput
                 label="Male Pending"
-                value={org.male_pending}
+                value={org.male_pending ?? ''}
                 onChange={(v) => handleChange(index, 'male_pending', v)}
               />
             </Grid.Col>
             <Grid.Col span={4}>
               <NumberInput
                 label="Male Available"
-                value={org.male_available}
+                value={org.male_available ?? ''}
                 onChange={(v) => handleChange(index, 'male_available', v)}
               />
             </Grid.Col>
@@ -120,7 +120,7 @@ export default function AdminForm({
                 <Grid.Col span={4}>
                   <NumberInput
                     label="Female Capacity"
-                    value={org.special_prog_female_capacity}
+                    value={org.special_prog_female_capacity ?? ''}
                     onChange={(v) =>
                       handleChange(index, 'special_prog_female_capacity', v)
                     }
@@ -129,7 +129,7 @@ export default function AdminForm({
                 <Grid.Col span={4}>
                   <NumberInput
                     label="Female Pending"
-                    value={org.special_prog_female_pending}
+                    value={org.special_prog_female_pending ?? ''}
                     onChange={(v) =>
                       handleChange(index, 'special_prog_female_pending', v)
                     }
@@ -138,7 +138,7 @@ export default function AdminForm({
                 <Grid.Col span={4}>
                   <NumberInput
                     label="Female Available"
-                    value={org.special_prog_female_available}
+                    value={org.special_prog_female_available ?? ''}
                     onChange={(v) =>
                       handleChange(index, 'special_prog_female_available', v)
                     }
@@ -148,7 +148,7 @@ export default function AdminForm({
                 <Grid.Col span={4}>
                   <NumberInput
                     label="Male Capacity"
-                    value={org.special_prog_male_capacity}
+                    value={org.special_prog_male_capacity ?? ''}
                     onChange={(v) =>
                       handleChange(index, 'special_prog_male_capacity', v)
                     }
@@ -157,7 +157,7 @@ export default function AdminForm({
                 <Grid.Col span={4}>
                   <NumberInput
                     label="Male Pending"
-                    value={org.special_prog_male_pending}
+                    value={org.special_prog_male_pending ?? ''}
                     onChange={(v) =>
                       handleChange(index, 'special_prog_male_pending', v)
                     }
@@ -166,7 +166,7 @@ export default function AdminForm({
                 <Grid.Col span={4}>
                   <NumberInput
                     label="Male Available"
-                    value={org.special_prog_male_available}
+                    value={org.special_prog_male_available ?? ''}
                     onChange={(v) =>
                       handleChange(index, 'special_prog_male_available', v)
                     }

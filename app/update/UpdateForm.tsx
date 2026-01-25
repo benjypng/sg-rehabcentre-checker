@@ -8,7 +8,6 @@ import {
   NumberInput,
   Text,
   TextInput,
-  Title,
 } from '@mantine/core'
 import { notifications } from '@mantine/notifications'
 import { useRouter } from 'next/navigation'
@@ -56,21 +55,21 @@ export default function UpdateForm({ org }: { org: SerializedOrganisation }) {
         <Grid.Col span={4}>
           <NumberInput
             label="Female Capacity"
-            value={formData.female_capacity}
+            value={formData.female_capacity ?? ''}
             onChange={(v) => handleChange('female_capacity', v)}
           />
         </Grid.Col>
         <Grid.Col span={4}>
           <NumberInput
             label="Female Pending"
-            value={formData.female_pending}
+            value={formData.female_pending ?? ''}
             onChange={(v) => handleChange('female_pending', v)}
           />
         </Grid.Col>
         <Grid.Col span={4}>
           <NumberInput
             label="Female Available"
-            value={formData.female_available}
+            value={formData.female_available ?? ''}
             onChange={(v) => handleChange('female_available', v)}
           />
         </Grid.Col>
@@ -78,21 +77,21 @@ export default function UpdateForm({ org }: { org: SerializedOrganisation }) {
         <Grid.Col span={4}>
           <NumberInput
             label="Male Capacity"
-            value={formData.male_capacity}
+            value={formData.male_capacity ?? ''}
             onChange={(v) => handleChange('male_capacity', v)}
           />
         </Grid.Col>
         <Grid.Col span={4}>
           <NumberInput
             label="Male Pending"
-            value={formData.male_pending}
+            value={formData.male_pending ?? ''}
             onChange={(v) => handleChange('male_pending', v)}
           />
         </Grid.Col>
         <Grid.Col span={4}>
           <NumberInput
             label="Male Available"
-            value={formData.male_available}
+            value={formData.male_available ?? ''}
             onChange={(v) => handleChange('male_available', v)}
           />
         </Grid.Col>
@@ -108,7 +107,7 @@ export default function UpdateForm({ org }: { org: SerializedOrganisation }) {
             <Grid.Col span={4}>
               <NumberInput
                 label="Female Capacity"
-                value={formData.special_prog_female_capacity}
+                value={formData.special_prog_female_capacity ?? ''}
                 onChange={(v) =>
                   handleChange('special_prog_female_capacity', v)
                 }
@@ -117,14 +116,14 @@ export default function UpdateForm({ org }: { org: SerializedOrganisation }) {
             <Grid.Col span={4}>
               <NumberInput
                 label="Female Pending"
-                value={formData.special_prog_female_pending}
+                value={formData.special_prog_female_pending ?? ''}
                 onChange={(v) => handleChange('special_prog_female_pending', v)}
               />
             </Grid.Col>
             <Grid.Col span={4}>
               <NumberInput
                 label="Female Available"
-                value={formData.special_prog_female_available}
+                value={formData.special_prog_female_available ?? ''}
                 onChange={(v) =>
                   handleChange('special_prog_female_available', v)
                 }
@@ -134,21 +133,21 @@ export default function UpdateForm({ org }: { org: SerializedOrganisation }) {
             <Grid.Col span={4}>
               <NumberInput
                 label="Male Capacity"
-                value={formData.special_prog_male_capacity}
+                value={formData.special_prog_male_capacity ?? ''}
                 onChange={(v) => handleChange('special_prog_male_capacity', v)}
               />
             </Grid.Col>
             <Grid.Col span={4}>
               <NumberInput
                 label="Male Pending"
-                value={formData.special_prog_male_pending}
+                value={formData.special_prog_male_pending ?? ''}
                 onChange={(v) => handleChange('special_prog_male_pending', v)}
               />
             </Grid.Col>
             <Grid.Col span={4}>
               <NumberInput
                 label="Male Available"
-                value={formData.special_prog_male_available}
+                value={formData.special_prog_male_available ?? ''}
                 onChange={(v) => handleChange('special_prog_male_available', v)}
               />
             </Grid.Col>
