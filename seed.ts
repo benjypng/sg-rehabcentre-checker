@@ -13,8 +13,13 @@ const getHashedPassword = (password: string): string => {
 
 async function main() {
   const uri = process.env.MONGO_URL
+  const dbName = process.env.COLLECTION
+
   if (!uri) {
     throw new Error('Please set MONGO_URL in your .env.local file')
+  }
+  if (!dbName) {
+    throw new Error('Please set COLLECTION in your .env.local file')
   }
 
   const client = new MongoClient(uri)
@@ -23,7 +28,7 @@ async function main() {
     await client.connect()
     console.log('Connected to database')
 
-    const db = client.db()
+    const db = client.db(dbName)
 
     console.log('Clearing existing data...')
     await db.collection('users').deleteMany({})

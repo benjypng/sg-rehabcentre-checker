@@ -14,8 +14,7 @@ import { ForcePasswordChange } from './components/ForcePasswordChange'
 import Provider from './SessionProvider'
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'SG Rehabcentre Checker',
 }
 
 export default function RootLayout({ children }: { children: any }) {
