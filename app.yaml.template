@@ -1,0 +1,20 @@
+runtime: nodejs20
+env: standard
+instance_class: F1
+inbound_services:
+  - warmup
+handlers:
+  - url: .*
+    script: auto
+env_variables:
+  COLLECTION: rehabcentre-checker
+  MONGO_URL: '$MONGO_URL'
+  SESSION_SECRET: $SESSION_SECRET
+  NEXTAUTH_URL: 'https://sg-rehabcentre-checker.as.r.appspot.com'
+automatic_scaling:
+  min_idle_instances: 1
+  max_idle_instances: 1
+  min_pending_latency: automatic
+  max_pending_latency: automatic
+  max_instances: 1
+service_account: sg-rehabcentre-checker@appspot.gserviceaccount.com
