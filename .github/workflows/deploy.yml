@@ -28,4 +28,6 @@ jobs:
         run: envsubst < app.yaml.template > app.yaml
 
       - name: Deploy to App Engine
-        run: gcloud app deploy --quiet
+        run: |
+          gcloud config set app/cloud_build_timeout 1800
+          gcloud app deploy --quiet
