@@ -28,4 +28,4 @@ jobs:
         run: envsubst < app.yaml.template > app.yaml
 
       - name: Deploy to App Engine
-        run: gcloud app deploy --quiet
+        run: gcloud app deploy --quiet --timeout=30m
