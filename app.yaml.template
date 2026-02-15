@@ -11,6 +11,8 @@ env_variables:
   MONGO_URL: '$MONGO_URL'
   SESSION_SECRET: $SESSION_SECRET
   NEXTAUTH_URL: 'https://sg-rehabcentre-checker.as.r.appspot.com'
+build:
+  cloud_build_timeout: 1800s
 automatic_scaling:
   min_idle_instances: 1
   max_idle_instances: 1
